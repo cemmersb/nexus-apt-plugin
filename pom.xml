@@ -41,7 +41,7 @@
       <url>http://192.168.178.25:8080/nexus/...</url>
     </repository>
   </distributionManagement>
-  -->
+  --> 
   
   <repositories>
     <repository>
