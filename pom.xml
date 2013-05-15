@@ -11,22 +11,6 @@
 
   <name>Nexus APT Repository Plugin</name>
   
-  <profiles>
-    <profile>
-      <id>IDE</id>
-      <!-- needed by IDEA to pick up the dependency -->
-      <dependencies>
-        <dependency>
-          <groupId>org.sonatype.nexus.plugins</groupId>
-          <artifactId>nexus-indexer-lucene-plugin</artifactId>
-          <version>${nexus.version}</version>
-          <scope>provided</scope>
-        </dependency>
-
-      </dependencies>
-    </profile>
-  </profiles>
-  
   <scm>
     <connection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</connection>
     <developerConnection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</developerConnection>
