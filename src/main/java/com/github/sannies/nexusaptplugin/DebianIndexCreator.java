@@ -51,7 +51,7 @@ import org.codehaus.plexus.util.StringUtils;
 @Component(role = IndexCreator.class, hint = DebianIndexCreator.ID)
 public class DebianIndexCreator
     extends AbstractIndexCreator {
-
+    
   Md5Locator md5Locator = new Md5Locator();
   public static final String ID = "debian-package";
   public static final IndexerField PACKAGE = new IndexerField(DEBIAN.PACKAGE, IndexerFieldVersion.V1, "deb_package",
@@ -81,6 +81,7 @@ public class DebianIndexCreator
     super(ID, Arrays.asList(MinimalArtifactInfoIndexCreator.ID));
   }
 
+  @Override
   public void populateArtifactInfo(ArtifactContext ac) throws IOException {
     if ("deb".equals(ac.getArtifactInfo().fextension)) {
       List<String> control = GetControl.doGet(ac.getArtifact());
@@ -94,12 +95,10 @@ public class DebianIndexCreator
           ac.addError(e);
         }
       }
-
-
     }
-
   }
 
+  @Override
   public void updateDocument(ArtifactInfo ai, Document doc) {
     if ("deb".equals(ai.fextension)) {
       if (ai.getAttributes().get(PACKAGE.getOntology().getFieldName()) != null) {
@@ -138,6 +137,7 @@ public class DebianIndexCreator
     }
   }
 
+  @Override
   public boolean updateArtifactInfo(Document doc, ArtifactInfo ai) {
     if ("deb".equals(ai.fextension)) {
 
