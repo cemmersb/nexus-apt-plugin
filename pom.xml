@@ -41,17 +41,12 @@
       <url>http://192.168.178.25:8080/nexus/...</url>
     </repository>
   </distributionManagement>
-  --> 
-  
-  <!--<repositories>
-    <repository>
-      <id>nexus</id>
-      <name>nexus</name>
-      <url>https://repository.sonatype.org/content/groups/public</url>
-    </repository>
-  </repositories>-->
+  -->
   
   <properties>
+    <!-- Project encoding -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Dependency versions -->
     <app-lifecycle.version>1.7</app-lifecycle.version>
     <commons-compress.version>1.5</commons-compress.version>
     <junit.version>4.5</junit.version>
