@@ -163,6 +163,7 @@ public class DebianIndexCreator
     return ID;
   }
 
+  @Override
   public Collection<IndexerField> getIndexerFields() {
     // it does not "add" any new field, it actually updates those already maintained by minimal creator.
     return Collections.emptyList();
