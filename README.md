@@ -8,13 +8,11 @@ software center.
 Installation
 ============
 
-(1) Checkout the source code
-(2) Run a maven build 
-   cd ${project.home}
-   mvn clean install
-(3) Go to your target directory
-(4) Unzip nexus-apt-plugin-${version}-bundle.zip into your 'sonatype-work/nexus/plugin-repository/' folder
-(5) Restart nexus
+- Checkout the source code
+- Run a maven build by going itno your ${project.home} directory and executing 'mvn clean install'
+- Go to your target directory
+- Unzip nexus-apt-plugin-${version}-bundle.zip into your 'sonatype-work/nexus/plugin-repository/' folder
+- Restart nexus
 
 > to be sure that the index is regenerated (the plugin adds attributes to index) it could be 
 neccessary to delete the index files under sonatype-work/nexus/indexer
@@ -42,6 +40,6 @@ This is fine.
 Adding a repository to sources.list
 ===================================
 
-echo 'deb http://repository.yourcompany.com/content/repositories/releases/Packages.gz ./' >> /etc/apt/sources.list.d/yourcompany.list 
-apt-get update
-apt-get install ${package.name}
+- echo 'deb http://repository.yourcompany.com/content/repositories/releases/Packages.gz ./' >> /etc/apt/sources.list.d/yourcompany.list 
+- apt-get update
+- apt-get install ${package.name}
