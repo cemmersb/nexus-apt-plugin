@@ -1,7 +1,5 @@
 package com.github.sannies.nexusaptplugin;
 
-import org.apache.commons.compress.archivers.ArchiveInputStream;
-import org.apache.commons.compress.archivers.ArchiveOutputStream;
 import org.apache.lucene.search.Query;
 import org.apache.maven.index.*;
 import org.apache.maven.index.context.IndexingContext;
