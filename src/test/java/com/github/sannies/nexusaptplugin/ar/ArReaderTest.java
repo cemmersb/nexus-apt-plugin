@@ -16,7 +16,7 @@ public class ArReaderTest {
     File deb = new File(getClass().getProtectionDomain().getCodeSource().getLocation().getFile(), "php5_5.3.10-1ubuntu3.2_all.deb");
     ArReader arReader = new ArReader(deb);
     for (ReadableArFile readableArFile : arReader) {
-      LOGGER.error("Could not read file with name: {}", readableArFile.getName());
+      LOGGER.info("Reading file with name: {}", readableArFile.getName());
       readableArFile.open();
     }
   }
