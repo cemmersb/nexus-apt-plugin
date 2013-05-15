@@ -34,12 +34,14 @@
     <app-lifecycle.version>1.7</app-lifecycle.version>
     <commons-compress.version>1.5</commons-compress.version>
     <junit.version>4.5</junit.version>
-    <nexus.version>2.4.0-09</nexus.version>
-    <nexus-rest-api.version>2.2.1</nexus-rest-api.version>
+    <log4j.version>1.2.17</log4j.version>
     <maven-compiler.version>3.1</maven-compiler.version>
     <maven-deploy.version>2.7</maven-deploy.version>
     <maven-javadoc.version>2.9</maven-javadoc.version>
     <maven-release.version>2.4.1</maven-release.version>
+    <nexus.version>2.4.0-09</nexus.version>
+    <nexus-rest-api.version>2.2.1</nexus-rest-api.version>
+    <slf4j.version>1.7.5</slf4j.version>
   </properties>
 
   <dependencies>
@@ -58,20 +60,36 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.sonatype.nexus</groupId>
-      <artifactId>nexus-rest-api</artifactId>
-      <version>${nexus-rest-api.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
       <groupId>org.sonatype.nexus.plugins</groupId>
       <artifactId>nexus-indexer-lucene-plugin</artifactId>
       <version>${nexus.version}</version>
       <scope>provided</scope>
       <type>nexus-plugin</type>
     </dependency>
+    <dependency>
+      <groupId>org.sonatype.nexus</groupId>
+      <artifactId>nexus-rest-api</artifactId>
+      <version>${nexus-rest-api.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
+    <!-- Logging dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+    
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.sonatype.nexus</groupId>
