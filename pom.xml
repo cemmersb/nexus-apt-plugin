@@ -43,13 +43,13 @@
   </distributionManagement>
   --> 
   
-  <repositories>
+  <!--<repositories>
     <repository>
       <id>nexus</id>
       <name>nexus</name>
       <url>https://repository.sonatype.org/content/groups/public</url>
     </repository>
-  </repositories>
+  </repositories>-->
   
   <properties>
     <app-lifecycle.version>1.7</app-lifecycle.version>
