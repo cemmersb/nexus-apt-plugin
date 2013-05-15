@@ -27,6 +27,22 @@
     </profile>
   </profiles>
   
+  <scm>
+    <connection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</connection>
+    <developerConnection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  
+  <!--
+  <distributionManagement>
+    <repository>
+      <id>emmersberger.org</id>
+      <name>emmersberger.org repository</name>
+      <url>http://192.168.178.25:8080/nexus/...</url>
+    </repository>
+  </distributionManagement>
+  -->
+  
   <repositories>
     <repository>
       <id>nexus</id>
@@ -46,12 +62,6 @@
     <maven-javadoc.version>2.9</maven-javadoc.version>
     <maven-release.version>2.4.1</maven-release.version>
   </properties>
-  
-  <scm>
-    <connection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</connection>
-    <developerConnection>scm:git:https://github.com/cemmersb/nexus-apt-plugin.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
 
   <dependencies>
     <!-- Apache Commons dependencies -->
